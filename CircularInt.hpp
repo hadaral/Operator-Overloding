@@ -1,3 +1,5 @@
+
+
 #include<iostream>
 #pragma once
 using namespace std;
@@ -22,7 +24,6 @@ class CircularInt{
         // friend CircularInt& operator ++ ();// prefix
 
         friend CircularInt operator/= (  CircularInt& a, int num);
-    //    friend CircularInt operator*= (  CircularInt& a, int num);
     //    friend CircularInt operator%= (  CircularInt& a, int num);
     //    friend CircularInt operator^ (  CircularInt& a, int num);
     //    friend CircularInt operator^= (  CircularInt& a, int num);
@@ -38,6 +39,7 @@ class CircularInt{
         friend CircularInt operator* ( CircularInt& other, int num);
         friend CircularInt operator* ( CircularInt& a,CircularInt& b );//we use twice at the same object
         friend CircularInt operator* ( int num, CircularInt& other);
+        friend CircularInt operator*= (  CircularInt& a, int num);
     //    friend CircularInt operator% ();
     //    friend CircularInt operator== ( const CircularInt& a, cosnt CircularInt& b);
     //    friend CircularInt operator!= ( const CircularInt& a, cosnt CircularInt& b);
@@ -57,9 +59,3 @@ class CircularInt{
 
 
 
-
-
-
-
-
-       
