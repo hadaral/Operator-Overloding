@@ -249,62 +249,62 @@ CircularInt operator/ ( CircularInt& c1,  CircularInt& c2 ){
 }
 
  CircularInt operator/ ( int  num, CircularInt& c){
-    // CircularInt a1 (c);
-    //if(c.current!=0){
+     CircularInt a1 (c);
+    if(c.current!=0){
         a1.current =range(a1,num/a1.current);
         return a1;
 
-    //}
-    //else {
-      //  stringstream ss;
-        //ss << "There is no number x in {" << c.begin << "," << c.end << "} such that x*" << num << "=" << c.current;
-        //string s = ss.str();
-        //throw s;
-    //}
-    //return a1;
+    }
+    else {
+        stringstream ss;
+        ss << "There is no number x in {" << c.begin << "," << c.end << "} such that x*" << num << "=" << c.current;
+        string s = ss.str();
+        throw s;
+    }
+    return a1;
 
 
     }
 
 CircularInt operator/ (CircularInt& c,  int  num){
-	//if( num!=0){
-	//	CircularInt a1(c);
+	if( num!=0){
+		CircularInt a1(c);
 		 a1.current=range(a1,a1.current/num);
 		return a1;
-	//	}
-	//else{
-	//	return c;
-	//	}
+		}
+	else{
+		return c;
+		}
 }
 
 // =/
  CircularInt& operator/= (CircularInt& c1,  CircularInt& c2){
-	//CircularInt& a1(c1);
-	//if(c2.current!=0){
+	CircularInt& a1(c1);
+	if(c2.current!=0){
         a1.current=range(a1,a1.current/c2.current);
 
-    //}
-    //else{
-        //stringstream ss;
-        //ss << "There is no number x in {" << c1.begin << "," << c1.end << "} such that x*" <<  c2.current<< "=" << c1.current;
-       // string s = ss.str();
-      //  throw s;
+    }
+    else{
+        stringstream ss;
+        ss << "There is no number x in {" << c1.begin << "," << c1.end << "} such that x*" <<  c2.current<< "=" << c1.current;
+        string s = ss.str();
+        throw s;
  
-    //}
+    }
     return a1;
 }
 CircularInt& operator/= (CircularInt& c,  int  num)  {
-    //CircularInt& a1 (c);
-     //if(num!=0){
+    CircularInt& a1 (c);
+     if(num!=0){
         a1.current =range(a1,a1.current/num);
         return a1;
 
     }
-    //else {
-        //stringstream ss;
-        //ss << "There is no number x in {" << c.begin << "," << c.end << "} such that x*" << num << "=" << c.current;
-        //string s = ss.str();
-      //  throw s;
-    //}
-  //  return a1;
-//} 
+    else {
+        stringstream ss;
+        ss << "There is no number x in {" << c.begin << "," << c.end << "} such that x*" << num << "=" << c.current;
+        string s = ss.str();
+        throw s;
+    }
+    return a1;
+} 
