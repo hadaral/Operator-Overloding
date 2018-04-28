@@ -273,8 +273,13 @@ CircularInt operator/ (CircularInt& c,  int  num){
 		return a1;
 		}
 	else{
-		return c;
+        stringstream ss;
+        ss << "error ! num = 0";
+        string s = ss.str();
+        throw s;
 		}
+        		return c;
+
 }
 
 // =/
