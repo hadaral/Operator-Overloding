@@ -121,5 +121,3 @@ public:
     //     friend bool operator<=(const CircularInt a , const CircularInt b);
     //     friend const CircularInt operator% (const CircularInt& a , const int num);
     //     friend const  CircularInt operator%=(const CircularInt a , const CircularInt b);
-
-
